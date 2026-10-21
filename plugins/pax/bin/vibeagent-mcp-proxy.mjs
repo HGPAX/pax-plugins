@@ -26,7 +26,7 @@ if (process.argv.includes('--print-proxy-path')) {
 }
 
 // stdio 모드엔 CLAUDE_CODE_MCP_SERVER_URL 이 없으므로 빌드 시 치환된 URL 을 사용.
-const MCP_URL = process.env.CLAUDE_CODE_MCP_SERVER_URL || 'https://hanmiglobal-pable-pax.vercel.app/api/local-ai/mcp';
+const MCP_URL = process.env.CLAUDE_CODE_MCP_SERVER_URL || 'https://hg-pax.pablestudio.com/api/local-ai/mcp';
 const PLUGIN_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 /** Codex 는 플러그인 루트를 cwd 로 띄운다 — 마켓플레이스 clone 의 remote(`<org>/pax-plugins`)로 토큰이 핀되지 않게 그 안이면 cwd 를 무시(최근 연결 경로). */
 const cwdForToken = () => (isInsideDir(process.cwd(), PLUGIN_ROOT) ? null : process.cwd());

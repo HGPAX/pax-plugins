@@ -26,7 +26,7 @@ import { fileURLToPath } from 'node:url';
 import { writeJsonAtomic, writeProjectToken, writeFolderBinding, writeDeploymentBypass, isValidBypassSecret } from './lib/store.mjs';
 import { PLUGIN_VERSION_HEADER, deploymentBypassHeaders, isDeploymentProtected, DEPLOYMENT_PROTECTED_MESSAGE } from './lib/rpc.mjs';
 
-const MCP_URL = process.env.CLAUDE_CODE_MCP_SERVER_URL || 'https://hanmiglobal-pable-pax.vercel.app/api/local-ai/mcp';
+const MCP_URL = process.env.CLAUDE_CODE_MCP_SERVER_URL || 'https://hg-pax.pablestudio.com/api/local-ai/mcp';
 const PLUGIN_VERSION = '2.1.0';
 const LIFETIME_MS = 600_000;
 
